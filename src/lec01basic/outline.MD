@@ -86,6 +86,7 @@ by  zj@webturing.com
 - Math
 - Array
 - Collection
+- Random
 
 ## 入门算法
 - 字符串处理（字符串和正则表达式）

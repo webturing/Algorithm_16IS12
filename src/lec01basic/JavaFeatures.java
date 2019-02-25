@@ -1,7 +1,6 @@
 package lec01basic;
 
 
-import java.text.SimpleDateFormat;
 
 public class JavaFeatures {
 

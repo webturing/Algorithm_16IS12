@@ -1,7 +1,5 @@
 package lec01basic;
 
-import java.util.Arrays;
-
 public class ArrayDemo2 {
     public static void main(String[] args) {
         int[] a = {1, 2, 3};
@@ -9,7 +7,6 @@ public class ArrayDemo2 {
         for (int i = 0; i < a.length; i++)
             b[i] = a[i];
         a = b;
-
         a[3] = 5;
     }
 }
