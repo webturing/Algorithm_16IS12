@@ -1,6 +1,6 @@
 package lec02algorithm;
 
-public class Brute {
+public class Cube {
     public static void main(String[] args) {
         int n = 100005;
         long start = System.currentTimeMillis();

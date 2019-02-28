@@ -1,7 +1,5 @@
 package lec02algorithm;
 
-import java.util.Arrays;
-
 public class Sqrt {
     public static void main(String[] args) {
         int n = 1000000005;
