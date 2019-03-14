@@ -29,6 +29,6 @@ by  zj@webturing.com
 ## Fibonacci 数列计算
 
 - 指数算法
-- 线性算法
-- 对数O(logn)
+- 线性算法$(O(n))$
+- 对数$O(\log{n})$
 - 常数O(1)
