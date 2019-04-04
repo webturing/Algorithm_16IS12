@@ -1,112 +1,48 @@
 package lec09greedy;
 
 import java.io.File;
-
-import java.io.FileNotFoundException;
-
-import java.util.Arrays;
-
+import java.io.IOException;
 import java.util.Collections;
-
+import java.util.Comparator;
 import java.util.Scanner;
-
 import java.util.Vector;
 
 
 public class GreedySelector {
-
-    static class Item implements Comparable<Item> {
-
-        int idx;
-
+    static class Item {
+        int id;
         int start;
-
         int end;
-
-
-        @Override
-
-        public String toString() {
-
-            // TODO Auto-generated method stub
-
-            return String.format("%d[%d, %d]", idx, start, end);
-
-        }
-
-
-        @Override
-
-        public int compareTo(Item item) {
-
-            // TODO Auto-generated method stub
-
-            return this.end - item.end;
-
-        }
-
     }
 
-
-    public static void main(String[] args) throws FileNotFoundException {
-
+    public static void main(String[] args) throws IOException {
         Scanner cin = new Scanner(new File("input.txt"));
-
         Vector<Item> items = new Vector<Item>();
-
-        int size = cin.nextInt();
-
-        while (size-- > 0) {
-
-            // System.out.println(cin.nextLine());
-
-            Item curItem = new Item();
-
-            curItem.idx = cin.nextInt();
-
-            curItem.start = cin.nextInt();
-
-            curItem.end = cin.nextInt();
-
-            // System.out.println(curItem);
-
-            items.add(curItem);
-
+        int n = cin.nextInt();
+        while (n-- > 0) {
+            Item item = new Item();
+            item.id = cin.nextInt();
+            item.start = cin.nextInt();
+            item.end = cin.nextInt();
+            items.add(item);
         }
-
-        // 排序
-
-        System.out.println(items);
-
-        Collections.sort(items);
-
-        System.out.println(items);
-
-        // 输出最有解
-
-        int start = 0;
-
-        int tot = 0;
-
-        for (Item item : items) {
-
-            if (item.start >= start) {
-
-                System.out.println("Selected" + item);
-
-                ++tot;
-
-                start = item.end;
-
+        Collections.sort(items, new Comparator<Item>() {
+            @Override
+            public int compare(Item o1, Item o2) {
+                return o1.end - o2.end;
             }
-
+        });
+        int tot = 0;
+        int start = 0;
+        for (Item item : items) {
+            if (item.start >= start) {
+                ++tot;
+                start = item.end;
+                System.out.println(String.format("%d %d %d", item.id, item.start, item.end));
+            }
         }
-
-        System.out.println("Tot=" + tot);
-
-
+        System.out.println(tot);
         cin.close();
-
     }
 
 }
