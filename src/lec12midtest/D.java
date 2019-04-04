@@ -1,4 +1,4 @@
-package lec10midtest;
+package lec12midtest;
 
 import java.util.Scanner;
 import java.util.Vector;

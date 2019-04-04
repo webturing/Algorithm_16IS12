@@ -1,6 +1,5 @@
-package lec10midtest;
+package lec12midtest;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 //自然数分解成两个合数 SPJ

@@ -1,8 +1,7 @@
-package lec10midtest;
+package lec12midtest;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Vector;
 
 //兵临城下 排序
 //20
