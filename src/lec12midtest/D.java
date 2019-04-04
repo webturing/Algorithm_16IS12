@@ -1,5 +1,6 @@
 package lec12midtest;
 
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -18,6 +19,9 @@ public class D {
             else if (type == 1) received.add(number);
             else if (type == 2) dialed.add(number);
         }
+        Collections.reverse(missed);
+        Collections.reverse(received);
+        Collections.reverse(dialed);
         int max = 10;
         max = Math.max(missed.size(), max);
         max = Math.max(received.size(), max);
