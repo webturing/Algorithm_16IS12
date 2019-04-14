@@ -11,14 +11,14 @@ public class C0Cube {
     }
 
     static void solve(int n) {//O(n^3)
-        for (int p = 1; p <= n; p++) {
-            for (int q = p + 1; q <= n; q++) {
+        for (int a = 1; a <= n; a++) {
+            for (int b = a + 1; b <= n; b++) {
                 int s = 0;
-                for (int k = p; k <= q; k++) {
+                for (int k = a; k <= b; k++) {
                     s += k;
                 }
                 if (s == n) {
-                    System.out.println(String.format("%d %d", p, q));
+                    System.out.println(String.format("%d %d", a, b));
                 }
             }
         }

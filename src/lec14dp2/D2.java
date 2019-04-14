@@ -15,7 +15,7 @@ public class D2 {
     }
 
     public static void main(String[] args) {
-        int n = 20;
+        int n = 200;
         int tot = 0;
         if (n >= 3) tot++;//至少有2,3这一对,其他孪生素数间距必然是2,
         for (int a = 3; a + 2 <= n; a += 2) {

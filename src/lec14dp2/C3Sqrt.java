@@ -12,7 +12,7 @@ public class C3Sqrt {
 
     static void solve(int n) {//O(sqrt(n))
         int m = 2 * n;
-        for (int p = (int) Math.sqrt(m); p >= 1; p--) {
+        for (int p = (int) Math.sqrt(m); p > 1; p--) {
             if (m % p != 0) continue;
             int q = m / p;
             int i = (q - p + 1) / 2;
