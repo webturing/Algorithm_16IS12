@@ -12,6 +12,7 @@ public class B {
     }
 
     static boolean dfs(int k, int m) {
+        if (m == 0) return true;
         if (k == n) return m == 0;
         return dfs(k + 1, m) || dfs(k + 1, m - F[k]);
     }

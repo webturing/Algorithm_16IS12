@@ -34,7 +34,9 @@ public class F {
     }
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         dfs(0);
+        System.out.println(System.currentTimeMillis() - start);
     }
 
     static Scanner cin = new Scanner(System.in);
