@@ -27,7 +27,7 @@ public class H {
                     Point p = Q.peek();
                     for (int dx = -1; dx <= 1; dx++)
                         for (int dy = -1; dy <= 1; dy++) {
-                            if (dx == dy) continue;
+                            if (Math.abs(dx - dy) != 1) continue;
                             Point q = new Point(p.x + dx, p.y + dy);
                             if (points.contains(q)) {
                                 Q.add(q);
