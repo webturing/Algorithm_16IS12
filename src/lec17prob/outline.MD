@@ -9,3 +9,11 @@
 - java.util.Random ***
 - Collections.shuffle()
 - BigInteger.isProbPrimer(int n)
+
+## 概率算法应用
+## 游戏
+- 赌轮转盘
+- 洗牌
+- 红包
+## 模拟
+- 数学期望
