@@ -11,7 +11,7 @@ public class LuckMoney2 {
     }
 
     /**
-     * 红包模拟，改进算法，设 n 个人分 x红包 则每一个人的期望是x/n 第一次的区间是
+     * 红包模拟，改进算法，设 n 个人分 x红包 则每一个人的期望是x/n 第一次的区间是[1,2*[x/n]-1]
      *
      * @param cents
      * @param bags
