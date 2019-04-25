@@ -22,11 +22,10 @@ public class P1230MatrixMultiply {
     }
 
     private static boolean check(int[][] a, int[][] b, int[][] c) {
-        if (a[0].length != b.length) return false;
-        if (a.length != c.length || b[0].length != c[0].length) return false;
+
         for (int i = 0; i < 50; i++) {
-            int[] x = randVector(a[0].length);
-            if (checkVector(mul(mul(x, a), b), mul(x, c))) return false;
+            int[] x = randVector(a.length);
+            if (!checkVector(mul(mul(x, a), b), mul(x, c))) return false;
         }
         return true;
     }
@@ -41,7 +40,7 @@ public class P1230MatrixMultiply {
         int[] ans = new int[c.length];
         for (int i = 0; i < c.length; i++) {
             for (int k = 0; k < c[0].length; k++)
-                ans[i] += x[k] * c[i][k];
+                ans[i] += x[i] * c[i][k];
         }
         return ans;
     }
