@@ -15,7 +15,7 @@ public class Filter {
     }
 
     public static void main(String[] args) {
-        System.out.println("hello world");
+        System.out.println("hell world");
         for (int n = 0; n <= 100; n++)
             if (prime[n])
                 System.out.print(n + " ");

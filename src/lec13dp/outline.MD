@@ -89,7 +89,7 @@ public class Fractor3 {
    - 简单函数法 O(n) //枚举[2,n-1]
    - O(sqrt(n))//枚举[2,sqrt(n)]
    - O(sqrt(n)/2)//枚举[2,sqrt(n)]中的奇数
-   - O(1) //一次性打表 O(nlogn)
+   - O(1) //一次性打表 $(n\log\log{n})​$
    - 概率算法 
 ## fib计算
 ## 数字三角形

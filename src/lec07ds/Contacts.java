@@ -8,6 +8,7 @@ public class Contacts {
         TreeMap<String, String> contacts = new TreeMap<>();
         contacts.put("Tom", "123456789");
         contacts.put("Jerry", "987654321");
+        contacts.put("Jerry", "987654321");
         System.out.println(contacts);
         contacts.put("Tom", "888888888888");
         contacts.remove("Jerry");

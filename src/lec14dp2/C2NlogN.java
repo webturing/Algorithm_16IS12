@@ -18,12 +18,11 @@ public class C2NlogN {
         int[] s = new int[n + 1];
         for (int i = 1; i < s.length; i++) s[i] = s[i - 1] + a[i];
         // System.out.println(Arrays.toString(s));
-        for (int i = 0; i < s.length; i++) {
+        for (int i = 0; i < s.length - 1; i++) {
             int x = s[i];
             int y = x + n;
-            int j = Arrays.binarySearch(s, y);
-            if (j < 0 || i + 1 == j) continue;
-            System.out.println(String.format("%d %d", i + 1, j));
+            int j = Arrays.binarySearch(s, i + 2, s.length, y);
+            if (j > i + 1) System.out.println(String.format("%d %d", i + 1, j));
 
         }
     }
